@@ -1,0 +1,55 @@
+/* /////////////////// */
+#main {}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    -webkit-perspective: 2500px;
+    perspective: 2500px;
+    z-index:1;
+
+}
+
+.cube {
+    position: fixed;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-100px);
+    transform: translateZ(-100px);
+    width: 100%;
+    height: 100%;
+}
+
+.cube-face {
+    position: absolute;
+    padding: 5vh;
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh;
+    overflow-x: hidden;
+    border: 2px solid var(--secondary);
+}
+
+#top {
+    transform: rotateX(-90deg) translateZ(-50vh);
+    -webkit-transform: rotateX(-90deg) translateZ(-50vh);
+    overflow: hidden;
+    background: var(--dark);
+}
+
+#bottom {
+    transform: rotateX(-90deg) translateZ(-50vh);
+    -webkit-transform: rotateX(90deg) translateZ(-50vh);
+    overflow: hidden;
+    background: var(--dark);
+   
+
+}
+
+#main {
+    transform: translateZ(-50vh);
+    /* -webkit-transform:rotateX(90deg) translateZ(-50vh); */
+    /* box-shadow: 0px 0px  70px  var(--secondary); */
+    overflow: hidden;
+}

@@ -1,8 +1,22 @@
+@font-face {
+  font-family: FT88-Regular;
+  src: url('./assets/fonts/FT88-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: FT88-Gothique;
+  src: url('./assets/fonts/FT88-Gothique.woff') format('woff');
+}
+
+@font-face {
+  font-family: FT88-Italic;
+  src: url('./assets/fonts/FT88-Italic.woff') format('woff');
+}
+
 main {
   margin: 0 auto;
-  max-width: 90%;
-  padding: 50px 30px;
 }
+
 :root {
   --primary: #C6F91F;
   --secondary: #ddf45b;
@@ -14,51 +28,163 @@ main {
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
+  --spacing-six: calc(3rem);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   min-height: 100%;
+  min-width: 100%;
+  font-size: 100%;
+  /* overflow: hidden; */
+
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: 0.1em;
-  background: var(--darker);
+  background: var(--dark);
   color: var(--primary);
-  font-family: "Courier New", Courier, monospace;
+  font-family: FT88-Regular;
 }
 
-mark{
-  background-color: var(--primary);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-li {
-  list-style: none;
+
+
+
+
+
+h1 {
+  font-family: FT88-Gothique;
 }
 
-.about{
-  display:grid;
+#hero {
+  height: 100vh;
+  
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  border-bottom: 3px normal white;
+ 
+
+}
+
+.heroBg iframe {
+  width: 100vw;
+  height: 56.25vw;
+  /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh;
+  /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* https://generatepress.com/forums/topic/add-gradient-on-top-of-video/ */
+.heroBg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff00 0%, var(--dark) 95%);
+  z-index: 1;
+}
+
+
+
+.about {
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 }
 
-.about-item-bottom{
+.about-item-bottom {
   grid-column: 4 / -1;
-  grid-row:  1 / span 8;
+  grid-row: 1 / span 8;
 }
 
-.about-item-top{
+.about-item-top {
   grid-row: 4 / -1;
   grid-column: 1 / span 8;
-  padding-top: 20%; 
-  z-index: 1; 
+  padding-top: 20%;
+  z-index: -1;
+}
+
+mark {
+  background-color: var(--primary);
+}
+
+
+
+.contact {
+  padding-top: 20%;
+
+}
+
+.contact>div>h2 {
+  font-size: 250px;
+
+}
+
+.scroll {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow-y: hidden;
+
+  border-top: 2px solid var(--primary);
+}
+
+.placeholder-email {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.email {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+  display: none;
+}
+
+
+.placeholder-git {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.git {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }

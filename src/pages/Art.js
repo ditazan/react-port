@@ -3,7 +3,7 @@ import React from "react";
 import Nav from "../components/Nav";
 import Crosshair from "../components/Contact";
 
-function WebStuff() {
+function Art() {
   return (
     <div>
       <Nav></Nav>
@@ -14,4 +14,4 @@ function WebStuff() {
   );
 }
 
-export default WebStuff;
+export default Art;

@@ -1,0 +1,56 @@
+.menus {
+  position: fixed;
+  z-index:100;
+
+}
+
+nav {
+  color: var(--secondary);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+nav a:hover {
+  color: var(--light);
+}
+
+nav div {
+  font-family: FT88-Regular;
+padding: 2vw;
+font-size: 75%;
+}
+
+.right-menu {
+  transform-origin: top right;
+
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 0px 40px;
+
+}
+
+.left-menu {
+  transform-origin: top left;
+
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 0px 40px;
+}
+
+
