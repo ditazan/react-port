@@ -6,9 +6,8 @@ import Crosshair from "../components/Contact";
 function NoMatch() {
   return (
     <div>
-      <Nav></Nav>
       <div className="main-content">
-        oops
+       
       </div>
 
     </div>

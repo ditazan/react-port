@@ -5,14 +5,13 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Crosshair from "../components/Crosshair";
+import ScreenOverlay from "../components/ScreenOverlay";
 
 function Home() {
   return (
     <div>
-      <Nav></Nav>
       <div className="main-content">
-        <Hero></Hero>
-        <About></About>
+        <ScreenOverlay></ScreenOverlay>
       </div>
 
       {/* <div className="scene">

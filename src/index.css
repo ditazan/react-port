@@ -29,6 +29,8 @@ main {
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
   --spacing-six: calc(3rem);
+
+  --pixel: 2px;
 }
 
 * {
@@ -71,7 +73,7 @@ h1 {
 
 #hero {
   height: 100vh;
-  
+
 }
 
 .heroBg {
@@ -84,9 +86,11 @@ h1 {
   pointer-events: none;
   overflow: hidden;
   border-bottom: 3px normal white;
- 
+
 
 }
+
+
 
 .heroBg iframe {
   width: 100vw;
@@ -188,3 +192,37 @@ mark {
   right: 0;
   display: none;
 }
+
+
+.pixel-border {
+ margin:20px 10px;
+  box-shadow:
+    0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--dark),
+    0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--dark),
+    0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--dark),
+    0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--dark),
+    0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--dark),
+    0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--dark),
+    0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6) var(--dark),
+    0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6) var(--dark),
+
+    calc(var(--pixel) * -1) 0 0 0 var(--secondary),
+    var(--pixel) 0 0 0 var(--secondary),
+    0 calc(var(--pixel) * -3) 0 0 var(--secondary),
+    0 calc(var(--pixel) * 2) 0 0 var(--secondary),
+    0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--secondary),
+    0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--secondary),
+    0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--secondary),
+    0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--secondary),
+    0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--secondary),
+    0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--secondary),
+    0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--secondary),
+    0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--secondary);
+
+}
+
+
+
+
+
+

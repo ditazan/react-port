@@ -1,55 +1,193 @@
 /* /////////////////// */
-#main {}
+
 
 .scene {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    -webkit-perspective: 2500px;
-    perspective: 2500px;
-    z-index:1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  -webkit-perspective-origin: 50% 0%;
+  -webkit-perspective: 20cm;
+  z-index: 1;
 
 }
 
 .cube {
-    position: fixed;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: translateZ(-100px);
-    transform: translateZ(-100px);
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-170px) translateX(-10vw);
+
+  /* transform: translateZ(-100px); */
+  width: 100%;
+  height: 100%;
 }
 
 .cube-face {
-    position: absolute;
-    padding: 5vh;
-    width: 100vw;
-    height: 100vh;
-    padding: 5vh;
-    overflow-x: hidden;
-    border: 2px solid var(--secondary);
+
+  position: absolute;
+  padding: 5vh;
+  width: 120vw;
+  height: 100vh;
+  padding: 5vh;
+  overflow-x: hidden;
+  border: 2px solid var(--secondary);
 }
 
 #top {
-    transform: rotateX(-90deg) translateZ(-50vh);
-    -webkit-transform: rotateX(-90deg) translateZ(-50vh);
-    overflow: hidden;
-    background: var(--dark);
+  transform: rotateX(-90deg) translateZ(-50vh);
+  -webkit-transform: rotateX(-90deg) translateZ(-50vh);
+  overflow: hidden;
+  /* background: blue; */
 }
 
 #bottom {
-    transform: rotateX(-90deg) translateZ(-50vh);
-    -webkit-transform: rotateX(90deg) translateZ(-50vh);
-    overflow: hidden;
-    background: var(--dark);
-   
+  /* transform-origin: top center; */
+  -webkit-transform-origin: top center;
+  height: 50vh;
+  transform: rotateX(45deg) translateZ(-105vh) translateY(35vh);
+  padding: 2% 10%;
+  /* width:92%;
+    -webkit-transform: rotateX(60deg) translate3d(4vw, 15vh, -100vh); */
+  overflow: hidden;
+  background: var(--dark);
+
 
 }
 
 #main {
-    transform: translateZ(-50vh);
-    /* -webkit-transform:rotateX(90deg) translateZ(-50vh); */
-    /* box-shadow: 0px 0px  70px  var(--secondary); */
-    overflow: hidden;
+  transform: translateZ(-50vh);
+  /* -webkit-transform:rotateX(90deg) translateZ(-50vh); */
+  /* box-shadow: 0px 0px  70px  var(--secondary); */
+  overflow: hidden;
+  /* background: red; */
+  /* height:75vh; */
+
 }
+
+.time {
+  padding: 0 15px;
+}
+
+.interface{
+}
+
+.aboutnav {}
+
+.contactnav {}
+
+.button {
+
+  text-align: center;
+}
+
+.knob {}
+
+
+.glowing {
+  position: relative;
+  color: var(--secondary);
+  border: 0.15em solid var(--secondary);
+  background: none;
+
+  -webkit-box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+    0px 0px 0.5em 0px var(--secondary);
+  -moz-box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+    0px 0px 0.5em 0px var(--secondary);
+  box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+    0px 0px 0.5em 0px var(--secondary);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing::before {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(100%) rotateX(95deg) scale(1, 0.35) translateX(5%);
+
+  background: red;
+  pointer-events: none;
+}
+
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.5;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.7;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.projects{
+  position: relative;
+}
+.projects::after {
+  content: "projects";
+  position: absolute;
+  top: -15%;
+  left: 20%;
+  background: var(--dark);
+}
+.sketches{
+  position: relative;
+}
+.sketches::after {
+  content: "sketches";
+  position: absolute;
+  top: -15%;
+  right: 25%;
+  background: var(--dark);
+}
+
+.creative::after{
+  content:"creative tech";
+  position: relative;
+  bottom:-10px;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 20px; /* Specified height */
+  background: var(--darker); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border:1px solid var(--secondary);
+  border-radius:5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: var(--primary); /* Green background */
+}
+
