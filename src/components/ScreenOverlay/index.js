@@ -7,17 +7,18 @@ function ScreenOverlay() {
     <div className="overlay">
       <div className="scene">
         <div id="cube" className="cube">
-          {/* <section id="top" className=" cube-face top">
+          <section id="top" className=" cube-face top">
             <p>hi</p>
-          </section> */}
+          </section>
 
           <section id="bottom" className="bottom cube-face ">
-            {/* <div className="time d-flex justify-content-between mt-3 mb-5  w-100 pixel-border">
+            {/* <div className="time d-flex justify-content-between mt-3 mb-5  w-100      border">
               <h3>time</h3> <h3>date</h3>
             </div> */}
             <div className=" w-100">
               <div className="interface ">
-                <div className="row justify-content-between">
+
+                <div className="row justify-content-between top-interface">
                   <div className="mt-auto col ">
                     <h1 className="">
                       Dit<br></br> Zanelli
@@ -52,32 +53,32 @@ function ScreenOverlay() {
                   </div>
                 </div>
 
-                <div className="row justify-content-between">
-                  <div className="creative pixel-border col-sm-5 col-md ">
+                <div className="row justify-content-between bottom-interface">
+                  <div className="creative      border col-sm-5 col-md ">
                     <div className="row justify-content-center">
                       <div className="projects col-5 d-flex flex-wrap">
                         <div className="row justify-content-between">
-                          <div className="col button pixel-border ">*</div>
-                          <div className="col button pixel-border  ">*</div>
-                          <div className="col button pixel-border ">*</div>
-                          <div className="col button pixel-border ">*</div>
-                          <div className="col button pixel-border ">*</div>
+                          <div className="col button        border ">*</div>
+                          <div className="col button        border  ">*</div>
+                          <div className="col button        border ">*</div>
+                          <div className="col button        border ">*</div>
+                          <div className="col button        border ">*</div>
                         </div>
                       </div>
                       <div className="sketches  col-5 d-flex flex-wrap ">
                         <div className="row justify-content-between">
-                          <div className="col button pixel-border">*</div>
-                          <div className="col button pixel-border">*</div>
-                          <div className="col button pixel-border">*</div>
-                          <div className="col button pixel-border">*</div>
-                          <div className="col button pixel-border">*</div>
-                          <div className="col button pixel-border">*</div>
+                          <div className="col button        border">*</div>
+                          <div className="col button        border">*</div>
+                          <div className="col button        border">*</div>
+                          <div className="col button        border">*</div>
+                          <div className="col button        border">*</div>
+                          <div className="col button        border">*</div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="web pixel-border col-sm-5 col-md-4  p-3 ">
+                  <div className="web        border col-sm-5 col-md-4  p-3 ">
                     <div className="row align-items-center">
                       <div className="knob col">*</div>
                       <div className="knob col">*</div>

@@ -5,8 +5,8 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  -webkit-perspective-origin: 50% 0%;
-  -webkit-perspective: 20cm;
+  -webkit-perspective-origin: 50% 20%;
+  -webkit-perspective: 10cm;
   z-index: 1;
 
 }
@@ -15,7 +15,7 @@
   position: fixed;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: translateZ(-170px) translateX(-10vw);
+  -webkit-transform: translateZ(0px) translateX(-10vw);
 
   /* transform: translateZ(-100px); */
   width: 100%;
@@ -42,15 +42,15 @@
 
 #bottom {
   /* transform-origin: top center; */
-  -webkit-transform-origin: top center;
+  /* -webkit-transform-origin: top center; */
   height: 50vh;
-  transform: rotateX(45deg) translateZ(-105vh) translateY(35vh);
+  transform: rotateX(90deg) translateZ(-75vh) translateY(-25vh);
   padding: 2% 10%;
   /* width:92%;
     -webkit-transform: rotateX(60deg) translate3d(4vw, 15vh, -100vh); */
   overflow: hidden;
   background: var(--dark);
-
+  max-height: 50vh;
 
 }
 
@@ -68,19 +68,7 @@
   padding: 0 15px;
 }
 
-.interface{
-}
 
-.aboutnav {}
-
-.contactnav {}
-
-.button {
-
-  text-align: center;
-}
-
-.knob {}
 
 
 .glowing {
@@ -142,8 +130,81 @@
   }
 }
 
-.projects{
+.interface {
   position: relative;
+}
+
+.top-interface {
+  height: 50%;
+}
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 20px;
+  /* Specified height */
+  background: var(--darker);
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 40px;
+  /* Slider handle height */
+  background: var(--primary);
+  /* Green background */
+}
+
+.bottom-interface {
+  height: 18vh;
+}
+
+.aboutnav {}
+
+.contactnav {}
+
+.button {
+
+  text-align: center;
+}
+
+
+
+.creative {
+  position: relative;
+height:100%;
+}
+
+.creative::before {
+  content: "creative tech";
+  position: absolute;
+  top: 0px;
+}
+
+.creative::after {
+  content: "creative tech";
+  position: absolute;
+  bottom: -10px;
+}
+.projects {
+  position: relative;
+  width: 45%;
+  height: 50%;
 }
 .projects::after {
   content: "projects";
@@ -151,43 +212,28 @@
   top: -15%;
   left: 20%;
   background: var(--dark);
+  text-align: center;
+
 }
-.sketches{
+
+.sketches {
   position: relative;
+  width: 45%;
+  height: 50%;
 }
+
 .sketches::after {
   content: "sketches";
   position: absolute;
   top: -15%;
   right: 25%;
   background: var(--dark);
+  text-align: center;
+
 }
 
-.creative::after{
-  content:"creative tech";
-  position: relative;
-  bottom:-10px;
-}
 
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 20px; /* Specified height */
-  background: var(--darker); /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-  border:1px solid var(--secondary);
-  border-radius:5px;
-}
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 40px; /* Slider handle height */
-  background: var(--primary); /* Green background */
-}
 
+
+.knob {}
