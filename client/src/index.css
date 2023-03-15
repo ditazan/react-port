@@ -1,0 +1,90 @@
+@font-face {
+  font-family: FT88-Regular;
+  src: url('./assets/fonts/FT88-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: FT88-Gothique;
+  src: url('./assets/fonts/FT88-Gothique.woff') format('woff');
+}
+
+@font-face {
+  font-family: FT88-Italic;
+  src: url('./assets/fonts/FT88-Italic.woff') format('woff');
+}
+
+main {
+  margin: 0 auto;
+}
+
+:root {
+  --primary: #C6F91F;
+  --secondary: #FBBFCA;
+  --tertiary: #875053;
+  --light: #fafafa;
+  --dark: #4b2628;
+  --darker: #0f0a0a;
+  --error: rgb(0, 0, 0);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-five: calc(2.5rem);
+  --spacing-six: calc(3rem);
+
+  --pixel: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+  font-size: 100%;
+  /* overflow: hidden; */
+
+}
+
+body {
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  background: var(--darker);
+  color: var(--primary);
+  font-family: FT88-Regular;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: FT88-Gothique;
+}
+
+mark {
+  background-color: var(--primary);
+}
+
+.custom-border {
+  border: 1px ridge var(--tertiary);
+  border-radius: 15px;
+}
+
+.recolor {
+  filter: invert(90%) sepia(69%) saturate(5195%) hue-rotate(287deg) brightness(111%) contrast(97%);
+}
+
+.main-content{
+  border: 1px solid green;
+  margin: 0 auto;
+width:70vw;
+  height: 72vh;
+  padding: 4%;
+  overflow: hidden;
+  overflow-y: scroll;
+}

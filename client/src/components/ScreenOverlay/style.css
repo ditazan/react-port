@@ -1,0 +1,220 @@
+.scene {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    -webkit-perspective-origin: 50% 0%;
+    -webkit-perspective: 25cm;
+    z-index: 13;
+  
+  }
+  
+  .cube {
+    position: fixed;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /* -webkit-transform: translateZ(-0px) translateX(-10vw); */
+  
+    /* transform: translateZ(-300px); */
+    width: 100%;
+    height: 100%;
+    /* border: solid 1px red; */
+  }
+  
+  .cube-face {
+    position: absolute;
+    padding: .5%;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    /* border: 2px solid var(--dark); */
+    border-top: none;
+  }
+  
+  #top {
+    transform: rotateX(-90deg) translateZ(-50vh);
+    -webkit-transform: rotateX(-90deg) translateZ(-50vh);
+    overflow: hidden;
+    /* background: blue; */
+  }
+  
+  .left {
+    transform-origin: left;
+    width: 20rem;
+    -webkit-transform: translateX(0vw) translateZ(-50vh) rotateY(-90deg);
+    transform: translateX(0vw) translateZ(-50vh) rotateY(-90deg);
+    overflow: hidden;
+  }
+  
+  .right {
+    transform-origin: left;
+    width: 20rem;
+    -webkit-transform: translateX(100vw) translateZ(-50vh) rotateY(-90deg);
+    transform: translateX(100vw) translateZ(-50vh) rotateY(-90deg);
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    /* filter:blur(3px); */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(10%)
+    }
+  }
+  
+  #bottom {
+    -webkit-transform: rotateX(90deg) translateZ(-50vh);
+    transform: rotateX(90deg) translateZ(-50vh);
+    padding: 2%;
+    overflow: hidden;
+    background: var(--darker);
+    border: 1px solid red;
+  }
+  
+  .interface {
+    padding: 1% 3% 3% 3%;
+  }
+  
+  #main {
+    transform: translateZ(-50vh);
+    overflow: hidden;
+    /* background: var(--darker); */
+  }
+  
+  .button {
+    text-align: center;
+  }
+  
+  .led {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    margin: 0% 1rem;
+  }
+  
+  .creative {
+    position: relative;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .creative::after {
+    content: "creative tech";
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    background: var(--darker);
+    color: var(--tertiary);
+  
+  }
+  
+  .projects {
+    position: relative;
+    width: 45%;
+    height: 50%;
+  }
+  
+  .projects::after {
+    content: "projects";
+    position: absolute;
+    top: -15px;
+    left: 20%;
+    background: var(--darker);
+    text-align: center;
+    color: var(--tertiary);
+  
+  }
+  
+  .sketches {
+    position: relative;
+    width: 45%;
+    height: 50%;
+  }
+  
+  .sketches::after {
+    content: "sketches";
+    position: absolute;
+    top: -15px;
+    right: 25%;
+    background: var(--darker);
+    text-align: center;
+    color: var(--tertiary);
+  
+  }
+  
+  .web {
+    position: relative;
+    height: 100%;
+  }
+  
+  .web::after {
+    content: "web dev";
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    background: var(--darker);
+    color: var(--tertiary);
+  
+  }
+  
+  
+  
+  .glowing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: var(--secondary);
+    border: 2px inset var(--secondary);
+    background: none;
+    border-radius: 1rem;
+    -webkit-box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+      0px 0px 0.5em 0px var(--secondary);
+    -moz-box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+      0px 0px 0.5em 0px var(--secondary);
+    box-shadow: inset 0px 0px 1.5em 0px var(--secondary),
+      0px 0px 0.5em 0px var(--secondary);
+    animation: border-flicker 10s linear infinite;
+  
+    overflow: hidden;
+  }
+  
+  
+  @keyframes border-flicker {
+    0% {
+      opacity: 0.5;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.7;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+  
+    40% {
+      opacity: 0.7;
+    }
+  
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .glow-none {
+    background: var(--darker);
+  
+  }
